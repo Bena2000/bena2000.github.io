@@ -1,39 +1,46 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  padding-top: 5%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 8rem;
-  background: rgba(0,0,0,0);
-  .text{
-    & > p{
-      font-size: 1.8rem;
-    }
-    h1{
-      font-size: 7rem;
-    }
+  margin-top: 12rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 
-    h3{
-      color:var(--green);
-      margin: 1rem 0;
-    }
+  .hard-skills{
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+  }
+  .hability{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    
-    p.small-resume {
-      margin-bottom: 5rem;
+    img{
+      width: 3.4rem;
     }
   }
 
-  .button{
-    margin-top: 5rem;
-    padding: 1.4rem 6rem;
+  h2{
+    display: inline-block;
+    margin-bottom: 2rem;
+    // border-bottom: 0.2rem solid var(--blue);
+    font-size :3rem;
+    margin-top: 0rem;
+    color: var(--green);
   }
+
+  h3{
+    margin-top: 2rem;
+    color: var(--green);
+  }
+
+  p{
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+  }
+
 `
-
-export const Image = styled.div`
-  img{
-    max-width: 500px;
-  }
-`;
