@@ -42,16 +42,19 @@ export const Body = styled.div`
   }
 
   p{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
     letter-spacing: 0.12rem;
     margin-bottom: 2rem;
 
     a{
+      text-align: justify;
       color: #FFFF;
-      border-bottom: 1px solid var(--green);
+      border-bottom: 1px solid var(--blue);
       transition: color 0.25s;
       &:hover{
-        color: var(--green);
+        color: var(--blue);
       }
     }
 

@@ -16,10 +16,9 @@ export const Container = styled.section`
     }
 
     h3{
-      color:var(--green);
+      color:var(--blue);
       margin: 1rem 0;
     }
-
     
     p.small-resume {
       margin-bottom: 5rem;

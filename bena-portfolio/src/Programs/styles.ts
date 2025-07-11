@@ -48,10 +48,10 @@ export const Body = styled.div`
 
     a{
       color: #FFFF;
-      border-bottom: 1px solid var(--green);
+      border-bottom: 1px solid var(--blue);
       transition: color 0.25s;
       &:hover{
-        color: var(--green);
+        color: var(--blue);
       }
     }
 
