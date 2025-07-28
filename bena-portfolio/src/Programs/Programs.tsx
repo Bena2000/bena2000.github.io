@@ -1,6 +1,8 @@
 import { ProgramTile } from "./ProgramTile";
 import { Container, Projects } from "./styles";
 
+import fuzzylib from "../assets/fuzzylib.png"
+
 export const Programs: React.FC = () => {
   return (
     <Container>
@@ -15,7 +17,7 @@ export const Programs: React.FC = () => {
         <ProgramTile
           title="Python fuzzy library"
           description="The project developed during the master's degree, implementing custom fuzzy model using the numpy library."
-          image=""
+          image={fuzzylib}
           technologies={["Python", "Numpy"]} />
       </Projects>
     </Container>

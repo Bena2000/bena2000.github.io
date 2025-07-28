@@ -1,4 +1,4 @@
-import { Container, Image } from './styles';
+import { Container, Image, Name, Title } from './styles';
 import image from "../assets/photo.png"
 import AboutMe from '../AboutMe/AboutMe';
 
@@ -12,8 +12,8 @@ export const Welcome: React.FC = () => {
                 <div>
                     <div className="text">
                         <p>Hello, I'm</p>
-                        <h1>Piotr Bednarek</h1>
-                        <h3>Software Engineer</h3>
+                        <Name>Piotr Bednarek</Name>
+                        <Title>Software Engineer</Title>
                         <p>{new Date().getFullYear() - 2020} Year Experience</p>
                     </div>
                     <AboutMe />

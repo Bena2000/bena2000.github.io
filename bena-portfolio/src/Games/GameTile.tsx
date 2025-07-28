@@ -1,33 +1,34 @@
 import { Slideshow } from "../Slideshow/Slideshow";
-import { Body, Footer, Header, Project } from "./styles";
+import { Content, Footer, Project, TechList, Title } from "./styles";
 
 interface Props {
     title: string,
     description: string,
     images: string[],
-    technologies: string[]
+    technologies: string[],
+    horizontal: boolean
 }
 
-export const GameTile: React.FC<Props> = ({ title, description, images, technologies }) => {
+export const GameTile: React.FC<Props> = ({ title, description, images, technologies, horizontal }) => {
     return (
         <Project>
-            <Header>
-                <div className="project-links">
-                </div>
-            </Header>
-            <Body>
-                <h3>{title}</h3>
-                <p>
-                    <a> {description} </a>
-                    {images.length > 0 ? <Slideshow images={images} /> : ""}
-                </p>
-            </Body>
+            <div>
+                <Title>{title}</Title>
+                <Content>
+                    <div style={horizontal ? { width: "40%" } : { width: "70%" }}>
+                        <a> {description} </a>
+                    </div>
+                    <div style={horizontal ? { width: "60%" } : { width: "30%" }}>
+                        {images.length > 0 ? <Slideshow imagesPaths={images} /> : ""}
+                    </div>
+                </Content>
+            </div>
             <Footer>
-                <ul className="tech-list">
+                <TechList>
                     {technologies.map(function (item) {
                         return <li key={item}>{item}</li>
                     })}
-                </ul>
+                </TechList>
             </Footer>
         </Project>
     )

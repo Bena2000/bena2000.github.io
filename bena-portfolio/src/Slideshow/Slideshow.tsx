@@ -1,29 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 interface Props {
-    images: string[]
+    imagesPaths: string[]
 }
 
-export const Slideshow: React.FC<Props> = ({ images }) => {
+export const Slideshow: React.FC<Props> = ({ imagesPaths }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) =>
-                prevIndex === images.length - 1 ? 0 : prevIndex + 1
-            );
-        }, 4000);
-
-        return () => clearInterval(interval);
-    }, []);
+    function getImageButton(index: number) {
+        return <button key={index} style={{ width: "20px", height: "20px" }} onClick={() => setCurrentIndex(index)} />
+    }
 
     return (
-        <div style={{}}>
-            <img
-                src={images[currentIndex]}
-                alt={`Slide ${currentIndex + 1}`}
-                style={{ maxWidth: "100%", maxHeight: "300px", objectFit: "cover" }}
-            />
+        <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ height: "90%" }}>
+                <img
+                    src={imagesPaths[currentIndex]}
+                    alt={`Slide ${currentIndex + 1}`}
+                    style={{ maxWidth: "100%", objectFit: "cover" }}
+                />
+            </div>
+            {
+                imagesPaths.length <= 1 ?
+                    "" :
+                    <div style={{ height: "10%", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "10px", paddingTop: "10px" }}>
+                        {imagesPaths.map((_, index) => getImageButton(index))}
+                    </div>
+            }
         </div>
     );
 };

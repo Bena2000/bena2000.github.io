@@ -1,4 +1,5 @@
-import { Container } from './styles';
+import { EducationTile } from './EducationTile';
+import { Container, EduactionSection, Title } from './styles';
 
 export const AboutMe: React.FC = () => {
   return (
@@ -9,16 +10,20 @@ export const AboutMe: React.FC = () => {
         <p>➥ Particularly interested in AI development.</p>
         <p>➥ Lodz, Poland.</p>
       </div>
-      <div className="education">
-        <h3>Education:</h3>
-        <h4> Artificial Intelligence and Machine Learning </h4>
-        <p>Lodz University of Technology, Lodz</p>
-        <p>February 2023 - Present</p>
+      <Title>Education:</Title>
+      <EduactionSection>
+        <EducationTile
+          fieldOfStudy='Artificial Intelligence and Machine Learning'
+          universityName='Lodz University of Technology, Lodz'
+          time='February 2023 - Present'
+        />
 
-        <h4> Computer Science </h4>
-        <p>Lodz University of Technology, Lodz</p>
-        <p>October 2019 - February 2023</p>
-      </div>
+        <EducationTile
+          fieldOfStudy='Computer Science'
+          universityName='Lodz University of Technology, Lodz'
+          time='October 2019 - February 2023'
+        />
+      </EduactionSection>
     </Container>
   );
 }

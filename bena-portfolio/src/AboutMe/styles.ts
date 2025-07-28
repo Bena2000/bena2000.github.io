@@ -6,24 +6,42 @@ export const Container = styled.section`
   flex-direction: column;
   gap: 2rem;
 
-  h2{
-    display: inline-block;
-    margin-bottom: 2rem;
-    // border-bottom: 0.2rem solid var(--blue);
-    font-size :3rem;
-    margin-top: 0rem;
-    color: var(--blue);
-  }
-
-  h3{
-    margin-top: 2rem;
-    color: var(--blue);
-  }
-
   p{
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
     font-weight: 500;
   }
-
 `
+export const Title = styled.h1`
+  margin-top: 1rem;
+  color: var(--blue);
+  font-size: 25px;
+`;
+
+export const EduactionSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
+export const EducationContainer = styled.div`
+  display: flex; 
+  flex-direction: row;
+  gap: 10px;
+`;
+
+export const FieldOfStudy = styled.h2`
+  font-size :25px;
+`;
+
+export const UniversityName = styled.p`
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+`;
+
+export const EduactionTime = styled.p`
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+`;

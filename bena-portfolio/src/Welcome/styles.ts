@@ -7,21 +7,10 @@ export const Container = styled.section`
   justify-content: center;
   gap: 8rem;
   background: rgba(0,0,0,0);
+  font-size: 1.8rem;
   .text{
     & > p{
       font-size: 1.8rem;
-    }
-    h1{
-      font-size: 7rem;
-    }
-
-    h3{
-      color:var(--blue);
-      margin: 1rem 0;
-    }
-    
-    p.small-resume {
-      margin-bottom: 5rem;
     }
   }
 
@@ -30,6 +19,16 @@ export const Container = styled.section`
     padding: 1.4rem 6rem;
   }
 `
+
+export const Name = styled.h1`
+  font-size: 7rem;
+`;
+
+export const Title = styled.h1`
+  margin-top: 1rem;
+  color: var(--blue);
+  font-size: 25px;
+`;
 
 export const Image = styled.div`
   img{
