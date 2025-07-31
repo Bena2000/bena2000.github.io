@@ -31,7 +31,10 @@ export const Title = styled.h1`
 `;
 
 export const Image = styled.div`
+  display: flex;
+  justify-content: center;
   img{
+    width: 100%;
     max-width: 500px;
   }
 `;

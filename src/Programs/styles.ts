@@ -69,6 +69,7 @@ export const Footer = styled.div`
   gap: 2rem;
   font-size: 1.4rem;
   opacity: 0.6;
+  }
 `;
 
 export const Header = styled.div`
